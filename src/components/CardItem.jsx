@@ -3,7 +3,7 @@ import iconEdit from "../assets/images/todo-item-edit-button.svg";
 import iconDelete from "../assets/images/activity-item-delete-button.svg";
 import { useState } from "react";
 import axios from "axios";
-import priorityList from "../List";
+import { priorityList } from "../List";
 import ModalLayout from "./ModalLayout";
 import ModalAddItem from "./ModalAddItem";
 import ModalDeleteActivity from "../components/ModalDeleteActivity";
@@ -68,7 +68,12 @@ export default function CardItem({ item, onDelete, onUpdate }) {
               .color
           }
         ></div>
-        <p className={"cursor-text font-poppins-medium text-lg me-4 " + (active ? "" : "text-gray888888 line-through")}>
+        <p
+          className={
+            "cursor-text font-poppins-medium text-lg me-4 " +
+            (active ? "" : "text-gray888888 line-through")
+          }
+        >
           {item.title}
         </p>
         <img
