@@ -24,7 +24,10 @@ export default function ModalAddItem({ initialValue, onClose, onSave, isAdd }) {
   }
 
   return (
-    <div className="w-[830px] bg-white rounded-xl divide-y divide-grayE5E5E5">
+    <div
+      className="w-[830px] bg-white rounded-xl divide-y divide-grayE5E5E5"
+      data-cy="modal-add"
+    >
       <div className="ps-[30px] pt-[24px] pe-[41px] pb-[19px] flex flex-row justify-between">
         <p className="font-poppins-semibold text-lg">{string1} List Item</p>
         <button onClick={onClose}>

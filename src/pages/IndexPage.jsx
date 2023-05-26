@@ -47,8 +47,12 @@ export default function IndexPage() {
 
   return (
     <div>
-      <ModalLayout modalFor="activity-info" visible={showInfoModal} onClose={handleInfoModalClose}>
-        <ModalActivityInfo />
+      <ModalLayout
+        modalFor="activity-info"
+        visible={showInfoModal}
+        onClose={handleInfoModalClose}
+      >
+        <ModalActivityInfo isActivity={true} />
       </ModalLayout>
       <div className="flex items-center justify-between mb-12">
         <h2 data-cy="activity-title" className="font-poppins-bold text-4xl">
@@ -75,7 +79,11 @@ export default function IndexPage() {
         </div>
       )}
       {activities.length === 0 && (
-        <img src={emptyActivityImage} className="mt-15 h-112 w-192 mx-auto" />
+        <img
+          src={emptyActivityImage}
+          className="mt-15 h-112 w-192 mx-auto"
+          data-cy="todo-empty-state"
+        />
       )}
     </div>
   );
