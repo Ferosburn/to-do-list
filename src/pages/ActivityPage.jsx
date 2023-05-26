@@ -82,6 +82,7 @@ export default function ActivityPage() {
   return (
     <div>
       <ModalLayout
+        modalFor="add-todo-item"
         visible={showCreateModal}
         onClose={() => setShowCreateModal(false)}
       >

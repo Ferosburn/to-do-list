@@ -24,10 +24,7 @@ export default function CardActivity({ activity, handleDelete }) {
       }}
       className="card cursor-pointer flex-initial h-60 p-6 bg-white shadow-custom rounded-xl flex flex-col justify-between"
     >
-      <ModalLayout
-        visible={showDeleteModal}
-        onClose={handleDeleteModalClose}
-      >
+      <ModalLayout modalFor="delete-activity-item" visible={showDeleteModal} onClose={handleDeleteModalClose}>
         <ModalDeleteActivity
           activity={activity}
           onDelete={handleDelete}
@@ -35,9 +32,14 @@ export default function CardActivity({ activity, handleDelete }) {
           isActivity={true}
         />
       </ModalLayout>
-      <p className="font-poppins-bold text-lg">{activity.title}</p>
+      <p className="font-poppins-bold text-lg" data-cy="activity-item-title">
+        {activity.title}
+      </p>
       <div className="flex items-center justify-between">
-        <p className="font-poppins-medium text-sm text-gray888888">
+        <p
+          className="font-poppins-medium text-sm text-gray888888"
+          data-cy="activity-item-date"
+        >
           {date.toLocaleDateString("id-ID", {
             year: "numeric",
             month: "long",

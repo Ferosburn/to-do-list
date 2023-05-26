@@ -47,7 +47,7 @@ export default function IndexPage() {
 
   return (
     <div>
-      <ModalLayout visible={showInfoModal} onClose={handleInfoModalClose}>
+      <ModalLayout modalFor="activity-info" visible={showInfoModal} onClose={handleInfoModalClose}>
         <ModalActivityInfo />
       </ModalLayout>
       <div className="flex items-center justify-between mb-12">

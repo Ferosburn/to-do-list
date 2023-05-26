@@ -33,7 +33,11 @@ export default function CardItem({ item, onDelete, onUpdate }) {
 
   return (
     <div className="w-full bg-white shadow-custom ps-7 py-6 pe-6 rounded-xl flex items-center justify-between">
-      <ModalLayout visible={isEditItem} onClose={() => setIsEditItem(false)}>
+      <ModalLayout
+        modalFor="update-todo-item"
+        visible={isEditItem}
+        onClose={() => setIsEditItem(false)}
+      >
         <ModalAddItem
           initialValue={item}
           onClose={() => setIsEditItem(false)}
@@ -41,6 +45,7 @@ export default function CardItem({ item, onDelete, onUpdate }) {
         />
       </ModalLayout>
       <ModalLayout
+        modalFor="delete-todo-item"
         visible={showDeleteItemModal}
         onClose={() => setShowDeleteItemModal(false)}
       >

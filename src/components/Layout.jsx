@@ -3,9 +3,10 @@ import { Link, Outlet } from "react-router-dom";
 export default function Layout() {
   return (
     <div className="relative bg-grayF4F4F4 w-screen min-h-screen">
-      <header data-cy="header-title" className="w-full bg-primary pt-9 pb-8 mb-11">
+      <header className="w-full bg-primary pt-9 pb-8 mb-11">
         <div className=" max-w-5xl px-5 mx-auto">
           <Link
+            data-cy="header-title"
             to={"/"}
             className="uppercase font-poppins-bold text-white text-2xl"
           >
