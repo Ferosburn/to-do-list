@@ -11,7 +11,7 @@ import ModalLayout from "../components/ModalLayout";
 import ModalAddItem from "../components/ModalAddItem";
 import ItemSort from "../components/ItemSort";
 import { sort } from "fast-sort";
-import sortList from "../List"
+import { sortList } from "../List";
 
 export default function ActivityPage() {
   const { id } = useParams();

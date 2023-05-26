@@ -2,7 +2,7 @@ import { useState } from "react";
 import closeBtn from "../assets/images/modal-add-close-button.svg";
 import chevronDown from "../assets/images/tabler-chevron-down.svg";
 import ItemPriority from "./ItemPriority";
-import priorityList from "../List";
+import { priorityList } from "../List";
 
 export default function ModalAddItem({ initialValue, onClose, onSave, isAdd }) {
   const [selected, setSelected] = useState(
