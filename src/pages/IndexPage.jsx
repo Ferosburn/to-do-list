@@ -67,7 +67,7 @@ export default function IndexPage() {
           <p>Tambah</p>
         </button>
       </div>
-      <div>
+      <div data-cy="activity-empty-state">
         {activities.length > 0 && (
           <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
             {activities.map((activity) => (
@@ -80,11 +80,7 @@ export default function IndexPage() {
           </div>
         )}
         {activities.length === 0 && (
-          <img
-            src={emptyActivityImage}
-            className="mt-15 h-112 w-192 mx-auto"
-            data-cy="activity-empty-state"
-          />
+          <img src={emptyActivityImage} className="mt-15 h-112 w-192 mx-auto" />
         )}
       </div>
     </div>

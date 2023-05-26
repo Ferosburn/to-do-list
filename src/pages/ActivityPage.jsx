@@ -148,7 +148,7 @@ export default function ActivityPage() {
             {showSort && (
               <div
                 className="absolute bg-white w-60 mt-1 border border-grayE5E5E5 rounded-md divide-y"
-                data-cy="sort-selection"
+                data-cy="sort-parent"
               >
                 {sortList.map((item, index) => (
                   <ItemSort

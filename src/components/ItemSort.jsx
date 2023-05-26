@@ -5,7 +5,7 @@ export default function ItemSort({ selected, sort, onSelected, element }) {
     <div
       className="cursor-pointer w-full px-5 py-3.5 flex items-center justify-between"
       onClick={() => onSelected(sort.value)}
-      data-cy="sort-selection-item"
+      data-cy="sort-selection"
       element={element}
     >
       <div className="flex gap-4 items-center">
