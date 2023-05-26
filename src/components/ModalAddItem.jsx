@@ -52,6 +52,7 @@ export default function ModalAddItem({ initialValue, onClose, onSave, isAdd }) {
             (showOptions ? "rounded-t-md bg-grayF4F4F4" : "rounded-md")
           }
           onClick={() => setShowOptions(!showOptions)}
+          data-cy="modal-add-priority-dropdown"
         >
           {showOptions ? (
             <>
@@ -80,10 +81,7 @@ export default function ModalAddItem({ initialValue, onClose, onSave, isAdd }) {
         {/* dropdown-button-end */}
         {/* dropdown-menu-start */}
         {showOptions && (
-          <div
-            className="absolute w-[205px] bg-white rounded-b-md border-x border-b border-grayE5E5E5 divide-y divide-grayE5E5E5"
-            data-cy="modal-add-priority-dropdown"
-          >
+          <div className="absolute w-[205px] bg-white rounded-b-md border-x border-b border-grayE5E5E5 divide-y divide-grayE5E5E5">
             {priorityList.map((item) => (
               <ItemPriority
                 key={item.value}

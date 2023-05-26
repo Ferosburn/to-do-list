@@ -67,24 +67,26 @@ export default function IndexPage() {
           <p>Tambah</p>
         </button>
       </div>
-      {activities.length > 0 && (
-        <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
-          {activities.map((activity) => (
-            <CardActivity
-              key={activity.id}
-              activity={activity}
-              handleDelete={deleteActivity}
-            />
-          ))}
-        </div>
-      )}
-      {activities.length === 0 && (
-        <img
-          src={emptyActivityImage}
-          className="mt-15 h-112 w-192 mx-auto"
-          data-cy="todo-empty-state"
-        />
-      )}
+      <div data-cy="todo-empty-state">
+        {activities.length > 0 && (
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+            {activities.map((activity) => (
+              <CardActivity
+                key={activity.id}
+                activity={activity}
+                handleDelete={deleteActivity}
+              />
+            ))}
+          </div>
+        )}
+        {activities.length === 0 && (
+          <img
+            src={emptyActivityImage}
+            className="mt-15 h-112 w-192 mx-auto"
+            data-cy="todo-empty-state"
+          />
+        )}
+      </div>
     </div>
   );
 }

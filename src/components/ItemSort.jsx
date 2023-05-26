@@ -1,7 +1,7 @@
 import check from "../assets/images/sort-check.svg";
 
 export default function ItemSort({ selected, sort, onSelected }) {
-  let dataCy = selected === oldest ? "sort-selection" : "todo-sort-button";
+  let dataCy = selected === "oldest" ? "sort-selection" : "todo-sort-button";
 
   return (
     <div
