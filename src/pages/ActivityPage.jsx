@@ -140,8 +140,9 @@ export default function ActivityPage() {
                 className="absolute bg-white w-60 mt-1 border border-grayE5E5E5 rounded-md divide-y"
                 data-cy="sort-selection"
               >
-                {sortList.map((item) => (
+                {sortList.map((item, index) => (
                   <ItemSort
+                    element={index}
                     key={item.value}
                     sort={item}
                     selected={sortSelected}

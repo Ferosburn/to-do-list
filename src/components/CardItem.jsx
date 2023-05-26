@@ -57,15 +57,15 @@ export default function CardItem({ item, onDelete, onUpdate }) {
       </ModalLayout>
       <div className="flex items-center">
         <label htmlFor={item.id} className="h-5 w-5 relative me-6">
+          {/* <img className="absolute left-1 top-1 -z-10" src={iconCheck} alt="" /> */}
           <input
-            className="w-full h-full z-10 appearance-none border border-grayC7C7C7 checked:bg-primary checked:border-none"
+            className="w-full h-full border border-grayC7C7C7 checked:accent-primary checked:border-none"
             type="checkbox"
             onChange={handleCheckBox}
             checked={!active}
             id={item.id}
             data-cy="todo-item-checkbox"
           />
-          <img className="absolute left-1 top-1" src={iconCheck} alt="" />
         </label>
         <div
           className={
