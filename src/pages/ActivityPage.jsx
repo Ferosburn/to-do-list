@@ -98,11 +98,13 @@ export default function ActivityPage() {
             <img src={iconBack} alt="" />
           </Link>
           <label
-            data-cy="todo-title"
             className="font-poppins-bold text-4xl flex items-center ms-5"
             onClick={() => setTitleInputActive("")}
           >
-            <h2 className={"cursor-text " + (!TitleInputActive && "hidden")}>
+            <h2
+              className={"cursor-text " + (!TitleInputActive && "hidden")}
+              data-cy="todo-title"
+            >
               {title}
             </h2>
             <input
@@ -129,6 +131,7 @@ export default function ActivityPage() {
             <button
               className="h-14 w-14 border border-grayE5E5E5 rounded-full flex items-center justify-center me-5"
               onClick={() => setShowSort(!showSort)}
+              data-cy="todo-sort-button"
             >
               <img src={iconSort} alt="" />
             </button>
@@ -148,6 +151,7 @@ export default function ActivityPage() {
           <button
             className="min-w-[150px] py-4 ps-6 pe-7 bg-primary text-white text-lg rounded-full font-poppins-semibold flex items-center"
             onClick={() => setShowCreateModal(true)}
+            data-cy="todo-add-button"
           >
             <img src={iconAdd} alt="" className="mr-1.5" />
             <p>Tambah</p>

@@ -39,6 +39,7 @@ export default function ModalAddItem({ initialValue, onClose, onSave, isAdd }) {
           placeholder={string2 + " nama list item"}
           value={name}
           onChange={(ev) => setName(ev.target.value)}
+          data-cy="modal-add-name-input"
         />
         <p className="font-poppins-semibold text-xs mb-[9px]">PRIORITY</p>
         {/* dropdown-button-start */}
@@ -76,7 +77,10 @@ export default function ModalAddItem({ initialValue, onClose, onSave, isAdd }) {
         {/* dropdown-button-end */}
         {/* dropdown-menu-start */}
         {showOptions && (
-          <div className="absolute w-[205px] bg-white rounded-b-md border-x border-b border-grayE5E5E5 divide-y divide-grayE5E5E5">
+          <div
+            className="absolute w-[205px] bg-white rounded-b-md border-x border-b border-grayE5E5E5 divide-y divide-grayE5E5E5"
+            data-cy="modal-add-priority-dropdown"
+          >
             {priorityList.map((item) => (
               <ItemPriority
                 key={item.value}
@@ -100,6 +104,7 @@ export default function ModalAddItem({ initialValue, onClose, onSave, isAdd }) {
             onSave(name, selected);
             onClose();
           }}
+          data-cy="modal-add-save-button"
         >
           Simpan
         </button>

@@ -8,9 +8,9 @@ export default function Layout() {
           <Link
             data-cy="header-title"
             to={"/"}
-            className="uppercase font-poppins-bold text-white text-2xl"
+            className="font-poppins-bold text-white text-2xl"
           >
-            To Do List App
+            TO DO LIST APP
           </Link>
         </div>
       </header>
