@@ -79,6 +79,7 @@ export default function CardItem({ item, onDelete, onUpdate }) {
             "cursor-text font-poppins-medium text-lg me-4 " +
             (active ? "" : "text-gray888888 line-through")
           }
+          data-cy="todo-item-title"
         >
           {item.title}
         </p>
