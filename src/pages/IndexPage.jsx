@@ -51,8 +51,11 @@ export default function IndexPage() {
         <ModalActivityInfo />
       </ModalLayout>
       <div className="flex items-center justify-between mb-12">
-        <h2 className="font-poppins-bold text-4xl">Activity</h2>
+        <h2 data-cy="activity-title" className="font-poppins-bold text-4xl">
+          Activity
+        </h2>
         <button
+          data-cy="activity-add-button"
           className="py-3.5 ps-5 pe-7 bg-primary text-white text-lg rounded-full font-poppins-semibold flex items-center"
           onClick={addActivity}
         >

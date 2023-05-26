@@ -18,12 +18,16 @@ export default function CardActivity({ activity, handleDelete }) {
 
   return (
     <div
+      data-cy="activity-item"
       onClick={(e) => {
         if (e.currentTarget.className.includes("card")) setRedirect(true);
       }}
       className="card cursor-pointer flex-initial h-60 p-6 bg-white shadow-custom rounded-xl flex flex-col justify-between"
     >
-      <ModalLayout visible={showDeleteModal} onClose={handleDeleteModalClose}>
+      <ModalLayout
+        visible={showDeleteModal}
+        onClose={handleDeleteModalClose}
+      >
         <ModalDeleteActivity
           activity={activity}
           onDelete={handleDelete}
@@ -41,6 +45,7 @@ export default function CardActivity({ activity, handleDelete }) {
           })}
         </p>
         <button
+          data-cy="activity-item-delete-button"
           id="button-delete"
           className="z-10"
           onClick={(ev) => {

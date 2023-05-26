@@ -97,6 +97,7 @@ export default function ActivityPage() {
             <img src={iconBack} alt="" />
           </Link>
           <label
+            data-cy="todo-title"
             className="font-poppins-bold text-4xl flex items-center ms-5"
             onClick={() => setTitleInputActive("")}
           >
