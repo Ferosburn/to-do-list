@@ -92,6 +92,7 @@ export default function CardItem({ item, onDelete, onUpdate }) {
         onClick={(ev) => {
           setShowDeleteItemModal(true);
         }}
+        data-cy="todo-item-delete-button"
       >
         <img src={iconDelete} alt="" />
       </button>
