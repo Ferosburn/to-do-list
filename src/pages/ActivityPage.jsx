@@ -12,6 +12,7 @@ import ModalAddItem from "../components/ModalAddItem";
 import ItemSort from "../components/ItemSort";
 import { sort } from "fast-sort";
 import { sortList } from "../List";
+import ModalActivityInfo from "../components/ModalActivityInfo";
 
 export default function ActivityPage() {
   const { id } = useParams();
@@ -21,6 +22,7 @@ export default function ActivityPage() {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showSort, setShowSort] = useState(false);
   const [sortSelected, setSortSelected] = useState("latest");
+  const [showInfoModal, setShowInfoModal] = useState(false);
 
   useEffect(() => {
     getTodo(id);
@@ -67,6 +69,7 @@ export default function ActivityPage() {
   function deleteTodo(id) {
     setTodoItems(todoItems.filter((item) => item.id !== id));
     axios.delete("/todo-items/" + id);
+    setShowInfoModal(true);
   }
 
   function addTodo(name, selected) {
@@ -91,6 +94,13 @@ export default function ActivityPage() {
           onSave={addTodo}
           isAdd={true}
         />
+      </ModalLayout>
+      <ModalLayout
+        modalFor="activity-info"
+        visible={showInfoModal}
+        onClose={() => setShowInfoModal(false)}
+      >
+        <ModalActivityInfo />
       </ModalLayout>
       <div className="flex items-center justify-between mb-12">
         <div className="flex items-center grow">
@@ -173,7 +183,11 @@ export default function ActivityPage() {
             />
           ))}
         {todoItems.length === 0 && (
-          <img className="mt-24 h-104 w-136 mx-auto" src={emptyTodoImage} />
+          <img
+            className="mt-24 h-104 w-136 mx-auto"
+            src={emptyTodoImage}
+            data-cy="todo-empty-state"
+          />
         )}
       </div>
     </div>

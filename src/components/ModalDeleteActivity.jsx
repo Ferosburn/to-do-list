@@ -7,7 +7,10 @@ export default function ModalDeleteActivity({
   isActivity,
 }) {
   return (
-    <div className="max-w-md cursor-default bg-white rounded-xl pt-10 pb-11 px-15 flex flex-col items-center text-center">
+    <div
+      className="max-w-md cursor-default bg-white rounded-xl pt-10 pb-11 px-15 flex flex-col items-center text-center"
+      data-cy="modal-delete"
+    >
       <img src={alertIcon} alt="" className="h-20 w-20 mb-8" />
       <p className="text-lg font-poppins-medium mb-12">
         Apakah anda yakin menghapus {isActivity ? "activity" : "List Item"}{" "}
