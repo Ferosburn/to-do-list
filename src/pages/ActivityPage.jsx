@@ -136,7 +136,10 @@ export default function ActivityPage() {
               <img src={iconSort} alt="" />
             </button>
             {showSort && (
-              <div className="absolute bg-white w-60 mt-1 border border-grayE5E5E5 rounded-md divide-y">
+              <div
+                className="absolute bg-white w-60 mt-1 border border-grayE5E5E5 rounded-md divide-y"
+                data-cy="sort-selection"
+              >
                 {sortList.map((item) => (
                   <ItemSort
                     key={item.value}

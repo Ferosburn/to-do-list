@@ -5,6 +5,7 @@ export default function ItemPriority({ selected, priority, onSelect }) {
     <div
       className="w-full ps-4 pe-6 py-3.5 flex flex-row items-center justify-between"
       onClick={() => onSelect(priority.value)}
+      data-cy="modal-add-priority-item"
     >
       <div className="flex flex-row items-center">
         <div

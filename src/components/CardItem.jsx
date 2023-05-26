@@ -63,6 +63,7 @@ export default function CardItem({ item, onDelete, onUpdate }) {
             onChange={handleCheckBox}
             checked={!active}
             id={item.id}
+            data-cy="todo-item-checkbox"
           />
           <img className="absolute left-1 top-1" src={iconCheck} alt="" />
         </label>

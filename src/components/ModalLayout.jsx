@@ -12,6 +12,9 @@ export default function ModalLayout({ children, visible, onClose, modalFor }) {
     case "activity-info":
       dataCy = "modal-information";
       break;
+    case "delete-todo-item":
+      dataCy = "todo-item-delete-button";
+      break;
     default:
       break;
   }
